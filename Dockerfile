@@ -1,13 +1,11 @@
-FROM node:14-alpine
+FROM node:14-alpine as builder
 
+RUN apk update && apk add build-base autoconf automake libtool pkgconfig nasm
 
+WORKDIR /app
+COPY ./package*.json ./
+RUN mkdir node_modules && npm install
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install -g gatsby-cli && npm install
-
-COPY . .
-
-EXPOSE 8000
+FROM node:12-alpine
+RUN npm install --global gatsby-cli && gatsby telemetry --disable && mkdir /save
+COPY --from=builder /app/node_modules /save/node_modules
