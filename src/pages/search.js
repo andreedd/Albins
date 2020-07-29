@@ -4,6 +4,7 @@ import SearchForm from '../components/searchForm';
 import SearchResults from '../components/searchResults';
 
 const Search = ({location}) => {
+    /*https://assortment.io/posts/gatsby-site-search-lunr-js*/
     const [results, setResults] = useState([]);
     const searchQuery = new URLSearchParams(location.search).get('keywords') || '';
 
@@ -16,7 +17,7 @@ const Search = ({location}) => {
           });
         }
     }, [location.search]);
-    console.log(results)
+
     return (
         <Layout>
             <SearchForm query={searchQuery} />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby';
 
-const searchForm = ({ query}) => {
+const searchForm = ({ query }) => {
     return (
         <form role="search" method="GET">
             <input

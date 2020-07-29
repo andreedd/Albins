@@ -10,7 +10,7 @@ const SearchResults = ({ query, results}) => {
             className="search-results-count"
             id="search-results-count"
             aria-live="assertive"
-            >Found {results.length} posts on "{query}"</h2>
+            >Found {results.length} songs on "{query}"</h2>
         }
         {!!results.length &&
             <ol className="search-results-list">
