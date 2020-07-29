@@ -12,6 +12,25 @@ module.exports = {
   `gatsby-transformer-sharp`, 
   `gatsby-plugin-sharp`,
   {
+    resolve: 'gatsby-plugin-lunr',
+    options: {
+      languages: [{ name: 'en' }],
+      fields: [
+        { name: 'title', store: true, attributes: { boost: 20 } },
+        { name: 'category', store: true, attributes: { boost: 5 } },
+        { name: 'url', store: true },
+      ],
+      resolvers: {
+        ContentfulSong: {
+          title: node => node.title,
+          category: node => node.category,
+          url: node => node.title,
+        },
+      },
+      filename: 'search_index.json',
+    },
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,

@@ -14,6 +14,9 @@ const navbar = () => {
                 <li>
                     <Link to="/songs">Songs</Link>
                 </li>
+                <li>
+                    <Link to="/search">Search</Link>
+                </li>
             </ul>
         </nav>
     )
