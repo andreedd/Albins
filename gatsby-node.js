@@ -3,6 +3,8 @@ const path = require('path')
 // create song pages dynamically
 exports.createPages = async ({graphql,actions}) => {
     const {createPage} = actions
+    let slugify = require('slugify')
+    
     const result = await graphql(`
     query getSongs {
         songs:allContentfulSong {
@@ -13,8 +15,7 @@ exports.createPages = async ({graphql,actions}) => {
         }
       }      
     `)
-    let slugify = require('slugify')
-    /*Create song page for songs */
+    /*Create song page for songs*/
     result.data.songs.nodes.forEach((song) => {
         createPage({
             path:`/songs/${slugify(song.title)}`,
@@ -24,7 +25,7 @@ exports.createPages = async ({graphql,actions}) => {
             },
         })
     })
-    /*Create song page for categories */
+    /*Create category page for songs*/
     result.data.songs.distinct.forEach((category) => {
       createPage({
           path:`/categories/${slugify(category)}`,
