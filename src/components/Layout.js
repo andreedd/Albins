@@ -7,10 +7,12 @@ import { isLoggedIn } from "../services/auth"
 
 
 const layout = ( {children }) => {
+
     if (!isLoggedIn()) {
-        navigate("/app/login")
+        if (typeof window !== 'undefined') { navigate("/app/login"); }
         return null
-      }
+        }
+    
     return (
         <>
             <Navbar/>
