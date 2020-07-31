@@ -15,17 +15,19 @@ function getUniqueListBy(arr, key) {
 const uniqueCategories = getUniqueListBy(songs, 'category')
 
   return <Layout>
-    <section className={styles.page}>
-      <h1>Hello from categoriess</h1>
+    <section className={styles.container}>
+    <h1>Categories</h1>
+      <div className={styles.containerWrapper}>
       {uniqueCategories.map((song)=> {
         return <article key={song.id}>
           <Link to={`/categories/${slugify(song.category)}`}>
             <div className={styles.link}>
-              <h2>{song.category}</h2>
+              <h4>{song.category}</h4>
             </div>
           </Link>
         </article>
       })}
+      </div>
     </section>
   </Layout>
 }

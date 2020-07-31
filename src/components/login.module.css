@@ -1,0 +1,76 @@
+
+.container{
+    min-height: 95vh;
+    width: 95vw;
+
+    max-width: 1170px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.containerWrapper{
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+form{
+    display: grid;
+    margin: 20px;
+    font-weight: bold;
+}
+
+input[type=password] {
+    line-height: 30px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    transition: .2s ease-in-out ;
+}
+
+input[type=submit] {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 10px;
+    height: 35px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #D0FF00;
+    border-style: hidden;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    
+    transition: .2s ease-in-out ;
+}
+input[type=password]:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+input[type=submit]:focus {
+    outline: none;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@media only screen and (min-width:400px){
+    .container{
+        width: 400px;
+    }
+}

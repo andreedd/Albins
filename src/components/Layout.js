@@ -15,11 +15,11 @@ const layout = ( {children }) => {
     
     return (
         <>
-            <Navbar/>
             <main>
                 {children}
             </main>
             <Footer/>
+            <Navbar/>
         </>
     )
 }

@@ -1,14 +1,30 @@
-.page{
+.container{
     width: 90vw;
     max-width: 1170px;
     text-transform: capitalize;
     margin: 0 auto;
+    margin-top: 5vh;
 }
 
-.page article{
-    margin: 2rem 0;
+.container h4{
+    margin: 0
+}
+
+.containerWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
 }
 
 .link{
-    background-color: sandybrown;
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #5A5A5A;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
 }
