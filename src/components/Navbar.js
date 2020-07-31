@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from "gatsby"
+import {Link, navigate} from "gatsby"
+import { isLoggedIn, logout } from "../services/auth"
 
 const navbar = () => {
     return (
@@ -17,6 +18,19 @@ const navbar = () => {
                 <li>
                     <Link to="/search">Search</Link>
                 </li>
+                {isLoggedIn() ? (
+                    <li>
+                        <a
+                            href="/"
+                            onClick={event => {
+                            event.preventDefault()
+                            logout(() => navigate(`/app/login`))
+                            }}
+                        >
+                            Logout
+                      </a>
+                    </li>
+                    ) : null}
             </ul>
         </nav>
     )
