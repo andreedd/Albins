@@ -28,7 +28,7 @@ const SearchResults = ({ query, results}) => {
                             <h3 className={styles.searchResultsListHeading}>
                                 {title}
                             </h3>
-                            <h5>
+                            <h5 style={{fontWeight: 100}}>
                                 {category}
                             </h5>
                         </div>

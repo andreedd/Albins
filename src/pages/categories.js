@@ -34,7 +34,7 @@ const uniqueCategories = getUniqueListBy(songs, 'category')
 
 export const query = graphql`
 {
-  allContentfulSong {
+  allContentfulSong(sort: {order: ASC, fields: [categoryOrder]}) {
     nodes {
       id
       category

@@ -6,6 +6,7 @@ const searchForm = ({ query }) => {
         <form role="search" method="GET">
             <input
             type="search"
+            placeholder="Search..."
             autocomplete="off"
             id="search-input"
             name="keywords"

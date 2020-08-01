@@ -11,7 +11,7 @@ const navbar = () => {
                 <Link className={styles.currentNav} to="/categories">Home</Link> :
                 <Link className={styles.navLinkColor} to="/categories">Home</Link>
                 }
-                {url.endsWith("/search") ?
+                {url.includes("/search") ?
                 <Link className={styles.currentNav} to="/search">Search</Link> :
                 <Link className={styles.navLinkColor} to="/search">Search</Link>
                 }

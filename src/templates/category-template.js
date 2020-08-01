@@ -28,7 +28,7 @@ const ComponentName = ({ data }) => {
 
 export const query = graphql`
 query getSingleCategorySongs($slug: String) {
-    allContentfulSong(filter: {category: {eq: $slug}}) {
+    allContentfulSong(filter: {category: {eq: $slug}}, sort: {order: ASC, fields: [order, category]}) {
         nodes {
           title
           category

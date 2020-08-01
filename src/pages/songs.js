@@ -29,7 +29,7 @@ const ComponentName = ({ data }) => {
 
 export const query = graphql`
 {
-  allContentfulSong {
+  allContentfulSong(sort: {order: ASC, fields: [order, category]}) {
     nodes {
       id
       author

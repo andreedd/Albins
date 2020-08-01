@@ -18,8 +18,7 @@
 
 .link{
     padding-left: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    height: 80px;
     background-color: var(--cardBackground);
     border-radius: 5px;
     -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
@@ -30,6 +29,11 @@
 
 .link:hover{
     transform: scale(1.015);
+}
+
+.link h4{
+    position: relative;
+    top: 15px;
 }
 
 @media only screen and (min-width:600px){
