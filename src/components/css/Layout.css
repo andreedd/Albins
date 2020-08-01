@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --bodyBackground: #3D3D3D;
+    --cardBackground: #5A5A5A;
+    --textColor: #FFFFFF;
+    --linkColor: #FFFFFF;
+    --buttonColor: #D0FF00;
+  }
+
+body{
+    margin: 0;
+}
+
+html{
+    background-color: var(--bodyBackground) ;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--textColor);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+a{
+    text-decoration: none;
+    color: var(--linkColor);
+}

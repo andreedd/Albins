@@ -1,13 +1,11 @@
 .container{
     width: 90vw;
-    max-width: 1170px;
     text-transform: capitalize;
     margin: 0 auto;
-    margin-top: 5vh;
 }
 
-.container h4{
-    margin: 0
+.container h4, h5{
+    margin: 0;
 }
 
 .containerWrapper{
@@ -22,9 +20,20 @@
     padding-left: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-color: #5A5A5A;
+    background-color: var(--cardBackground);
     border-radius: 5px;
     -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
     box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    transition: 0.15s ease-in-out;
+}
+
+.link:hover{
+    transform: scale(1.015);
+}
+
+@media only screen and (min-width:600px){
+    .container{
+        width: 600px;
+    }
 }

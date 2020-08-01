@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import styles from "../components/categories.module.css"
+import styles from "../components/css/categories.module.css"
 import {Link,graphql} from "gatsby"
 
 const ComponentName = ({ data }) => {

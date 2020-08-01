@@ -1,8 +1,8 @@
 import React from "react"
 import { StaticQuery, navigate, graphql } from "gatsby"
 import { handleLogin, isLoggedIn } from "../services/auth"
-import styles from "./login.module.css"
-import layoutStyles from "./Layout.css"
+import styles from "./css/login.module.css"
+import "./css/Layout.css"
 
 class Login extends React.Component {
 

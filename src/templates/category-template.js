@@ -1,25 +1,27 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../components/categories.module.css"
+import styles from "../components/css/songs.module.css"
 
 const ComponentName = ({ data }) => {
     const {allContentfulSong:{nodes:songs}} = data
     let slugify = require('slugify')
 
     return <Layout>
-    <section className={styles.page}>
-      <h1>Hello from category template</h1>
+    <section className={styles.container}>
+      <h1>{data.contentfulSong.category}</h1>
+      <div className={styles.containerWrapper}>
       {songs.map((song)=> {
         return <article key={song.id}>
           <Link to={`/songs/${slugify(song.title)}`}>
             <div className={styles.link}>
-              <h2>{song.title}</h2>
-              <h3><i>{song.melody}</i></h3>
+              <h2 style={{fontWeight: 500}}>{song.title}</h2>
+              <h5 style={{fontWeight: 100}}><i>{song.melody}</i></h5>
             </div>
           </Link>
         </article>
       })}
+      </div>
     </section>
   </Layout>
 }
@@ -35,6 +37,9 @@ query getSingleCategorySongs($slug: String) {
           author
         }
       }
+    contentfulSong(category: {eq: $slug}) {
+      category 
+    }
   }
   
 `

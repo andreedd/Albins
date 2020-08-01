@@ -1,0 +1,66 @@
+.container{
+    width: 90vw;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+.container h2, h3, h4{
+    margin: 0
+}
+
+h3{
+    font-weight: lighter;
+}
+
+.containerWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.link{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--cardBackground);
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    box-shadow: 4px 4px 7px 0px rgba(0,0,0,0.4);
+    transition: 0.15s ease-in-out;
+}
+
+.link:hover{
+    transform: scale(1.025);
+}
+
+.link h2 {
+    margin-bottom: 3px;
+}
+
+
+/*song-template.css specific*/
+
+.songWrapper {
+    background-color: var(--cardBackground);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.songtext {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.songtext p {
+    margin: 0;
+    line-height: 20px;
+}
+
+@media only screen and (min-width:600px){
+    .container{
+        width: 600px;
+    }
+}

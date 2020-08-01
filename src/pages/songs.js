@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../components/songs.module.css"
+import styles from "../components/css/songs.module.css"
 import {Link} from "gatsby"
 
 const ComponentName = ({ data }) => {
@@ -9,8 +9,9 @@ const ComponentName = ({ data }) => {
   let slugify = require('slugify')
 
   return <Layout>
-    <section className={styles.page}>
-      <h1>Hello from songs</h1>
+    <section className={styles.container}>
+      <h1>Songs</h1>
+      <div className={styles.containerWrapper}>
       {songs.map((song)=> {
         return <article key={song.id}>
           <Link to={`/songs/${slugify(song.title)}`}>
@@ -21,6 +22,7 @@ const ComponentName = ({ data }) => {
           </Link>
         </article>
       })}
+      </div>
     </section>
   </Layout>
 }

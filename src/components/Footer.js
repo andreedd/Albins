@@ -1,7 +1,6 @@
 import React from 'react'
 import {navigate} from "gatsby"
 import { isLoggedIn, logout } from "../services/auth"
-import styles from "./navbar.module.css"
 
 const footer = () => {
     return (

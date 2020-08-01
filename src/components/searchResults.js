@@ -1,19 +1,20 @@
 import React from 'react'
 import {Link} from "gatsby"
+import styles from "./css/search.module.css"
 
 const SearchResults = ({ query, results}) => {
     let slugify = require('slugify')
     return (
-        <section aria-label="Search results for all songs">
+        <section className={styles.container} aria-label="Search results for all songs">
         {!!results.length && query && 
         <h2
-            className="search-results-count"
+            className={styles.searchResultsCount}
             id="search-results-count"
             aria-live="assertive"
             >Found {results.length} songs on "{query}"</h2>
         }
         {!!results.length &&
-            <ol className="search-results-list">
+            <ol className={styles.searchResultsList}>
                 {results.map(({
                 title,
                 url,
@@ -21,12 +22,18 @@ const SearchResults = ({ query, results}) => {
                 }
             ) => (
                 <li key={title}>
-                    <h3 className="search-results-list__heading">
-                    <Link to={`/songs/${slugify(url)}`} className="search-results-list__link">
-                        {title}
+                    
+                    <Link to={`/songs/${slugify(url)}`} className={styles.SearchResultsListLink}>
+                        <div className={styles.link}>
+                            <h3 className={styles.searchResultsListHeading}>
+                                {title}
+                            </h3>
+                            <h5>
+                                {category}
+                            </h5>
+                        </div>
                     </Link>
-                    </h3>
-                    <h5>{category}</h5>
+
                 </li>
                 ))}
             </ol>
