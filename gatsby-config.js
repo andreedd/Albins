@@ -8,9 +8,19 @@ require('dotenv').config({
 })
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Albins songs",
+    titleTemplate: "%s · Skål!",
+    description:
+      "Albin feels like singing",
+    url: "https://albins.netlify.app", // No trailing slash allowed!
+    image: "/images/newalbin.png", // Path to your image you placed in the 'static' folder
+
+  },
   plugins: [`gatsby-plugin-styled-components`,
   `gatsby-transformer-sharp`, 
   `gatsby-plugin-sharp`,
+  `gatsby-plugin-react-helmet`,
   {
     resolve: 'gatsby-plugin-lunr',
     options: {

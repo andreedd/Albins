@@ -3,6 +3,7 @@ import { StaticQuery, navigate, graphql } from "gatsby"
 import { handleLogin, isLoggedIn } from "../services/auth"
 import styles from "./css/login.module.css"
 import "./css/Layout.css"
+import SEO from "../components/seo"
 
 class Login extends React.Component {
 
@@ -44,6 +45,7 @@ class Login extends React.Component {
         `}
         render={data => (
           <>
+          <SEO />
           <section className={styles.container}>
             <div className={styles.containerWrapper}>
             <form

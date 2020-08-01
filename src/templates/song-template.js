@@ -8,7 +8,6 @@ const ComponentName = ({ data }) => {
     return <Layout>
         <div className={styles.container}>
           <div className={styles.songWrapper}>
-              <h1>single song</h1>
               <h2>{data.song.title}</h2>
               <h3><i>Mel: {data.song.melody}</i></h3>
               <div className={styles.songtext}>

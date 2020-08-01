@@ -1,17 +1,23 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Link} from "gatsby"
+import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn} from "../services/auth"
 
-export default () => (
-  
+const Index = () => {
+
+  if (isLoggedIn()) {
+    if (typeof window !== 'undefined') { navigate("/categories"); }
+    return null
+    }
+
+  return(
   <Layout>
-    <div>Hello world!</div>
     <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
       <p>
         {isLoggedIn() ? (
           <>
-            You are logged in, so check your
+            <p>You are now logged in, you can now </p>
+            <Link to="/">Logout</Link>
           </>
         ) : (
           <>
@@ -21,5 +27,7 @@ export default () => (
         )}
       </p>
   </Layout>
-
+  
   )
+  }
+  export default Index

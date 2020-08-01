@@ -16,7 +16,7 @@ html{
     background-color: var(--bodyBackground) ;
     font-family: 'Josefin Sans', sans-serif;
     color: var(--textColor);
-    margin-top: 5vh;
+    margin-top: 2vh;
     margin-bottom: 5vh;
 }
 
