@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { Link, navigate } from "gatsby"
-import { getUser, isLoggedIn} from "../services/auth"
+import { getUser, isLoggedIn, logout} from "../services/auth"
 
 const Index = () => {
 
   if (isLoggedIn()) {
-    if (typeof window !== 'undefined') { navigate("/categories"); }
+    if (typeof window !== 'undefined') { logout(() => navigate(`/app/login`)); }
     return null
     }
 
