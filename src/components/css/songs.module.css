@@ -63,8 +63,8 @@ h3{
     min-height: 15px;
 }
 
-@media only screen and (min-width:600px){
+@media only screen and (min-width:450px){
     .container{
-        width: 600px;
+        width: 450px;
     }
 }

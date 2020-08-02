@@ -14,7 +14,13 @@ const ComponentName = ({ data }) => {
               {documentToReactComponents(data.song.content.json)}
               </div>
               {data.song.author != null &&
-                <h3>text: {data.song.author}</h3>
+                <p><i>Text: {data.song.author}</i></p>
+              }
+              {data.song.audioUrl != null &&
+                <audio controls src={data.song.audioUrl}>
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
               }
           </div>
         </div>
@@ -29,6 +35,7 @@ query GetSingleSong($slug:String)
       title
       melody
       category
+      audioUrl
       content {
         json
       }

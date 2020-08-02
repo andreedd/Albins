@@ -4,6 +4,8 @@ import { handleLogin, isLoggedIn } from "../services/auth"
 import styles from "./css/login.module.css"
 import "./css/Layout.css"
 import SEO from "../components/seo"
+import img from "../images/newalbin.svg"
+import note from "../images/note.svg"
 
 class Login extends React.Component {
 
@@ -47,6 +49,11 @@ class Login extends React.Component {
           <>
           <SEO />
           <section className={styles.container}>
+            <img className={styles.albin} src={img}/>
+            <img className={styles.note} src={note}/>
+            <img className={styles.note2} src={note}/>
+            <img className={styles.note3} src={note}/>
+            <img className={styles.note4} src={note}/>
             <div className={styles.containerWrapper}>
             <form
               method="post"
@@ -61,7 +68,6 @@ class Login extends React.Component {
             </div>
           </section>
         </>
-        
         )}
       ></StaticQuery>
     )

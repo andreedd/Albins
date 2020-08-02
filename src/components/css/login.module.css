@@ -13,8 +13,94 @@
 
 }
 
+
+.albin{
+    position: absolute;
+    top: 20%;
+    left: 46%;
+    width: 150px;
+    height: 150px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:wobble 5s linear infinite;
+    -moz-animation:wobble 5s linear infinite;
+    animation: wobble 5s linear infinite;
+
+
+}
+
+.note{
+    position: absolute;
+    top: 24%;
+    left: 60%;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:myOrbit 3s linear infinite;
+    -moz-animation:myOrbit 3s linear infinite;
+    animation: myOrbit 3s linear infinite;
+}
+
+.note2{
+    position: absolute;
+    top: 24%;
+    left: 60%;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:myOrbit 5s linear infinite;
+    -moz-animation:myOrbit 5s linear infinite;
+    animation: myOrbit 5s linear infinite;
+}
+
+.note3{
+    position: absolute;
+    top: 24%;
+    left: 60%;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:myOrbit 7s linear infinite;
+    -moz-animation:myOrbit 7s linear infinite;
+    animation: myOrbit 7s linear infinite;
+}
+
+.note4{
+    position: absolute;
+    top: 24%;
+    left: 60%;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:myOrbit 9s linear infinite;
+    -moz-animation:myOrbit 9s linear infinite;
+    animation: myOrbit 9s linear infinite;
+}
+
+@keyframes wobble {  0% { transform: translateX(0%); } 
+    0% { transform:  rotate(0); } 
+    50% { transform:  rotate(-25deg); } 
+    100% { transform:  rotate(0); } }
+
+@-moz-keyframes wobble {  0% { transform: translateX(0%); } 
+0% { transform:  rotate(0); } 
+50% { transform:  rotate(-25deg); } 
+100% { transform:  rotate(0); } }
+
+@-webkit-keyframes wobble {  0% { transform: translateX(0%); } 
+0% { transform:  rotate(0); } 
+50% { transform:  rotate(-25deg); } 
+100% { transform:  rotate(0); } }
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@-moz-keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@-webkit-keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
 .containerWrapper{
     width: 100%;
+    margin-top: 5vh;
     margin-bottom: 10vh;
 }
 
@@ -72,5 +158,31 @@ input[type=submit]:hover {
 @media only screen and (min-width:400px){
     .container{
         width: 400px;
+    }
+}
+
+@media only screen and (min-width:600px){
+    .albin{
+        left: 48%;
+    }
+
+    .note{
+        left: 52%;
+    }
+    
+    .note2{
+        left: 52%;
+    }
+    
+    .note3{
+        left: 52%;
+    }
+
+    .note4{
+        left: 52%;
+    }
+
+    .containerWrapper{
+        margin-top: 0;
     }
 }
