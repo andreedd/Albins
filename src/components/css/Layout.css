@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
+
+/*Color Palette: https://coolors.co/e0fbfc-c2dfe3-9db4c0-5c6b73-253237*/
 :root {
-    --bodyBackground: #3D3D3D;
-    --cardBackground: #5A5A5A;
-    --textColor: #FFFFFF;
-    --linkColor: #FFFFFF;
-    --buttonColor: #D0FF00;
-    --hoverColor: #777777;
+    --bodyBackground: #253237;
+    --cardBackground: #5c6b73;
+    --textColor: #ffffff;
+    --linkColor: #ffffff;
+    --hoverColor: #9db4c0;
   }
 
 body{
