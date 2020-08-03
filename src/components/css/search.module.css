@@ -49,6 +49,11 @@ input[type=search]:focus {
 
 .link:hover{
     transform: scale(1.015);
+    background-color: var(--hoverColor);
+}
+
+.link:active{
+    transform: scale(1.025);
 }
 
 @media only screen and (min-width:600px){

@@ -33,6 +33,11 @@ h3{
 
 .link:hover{
     transform: scale(1.025);
+    background-color: var(--hoverColor);
+}
+
+.link:active{
+    transform: scale(1.05);
 }
 
 .link h2 {
