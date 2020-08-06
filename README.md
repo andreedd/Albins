@@ -36,7 +36,7 @@ localhost:8000
 ## Deployment
 
 The project is currently continously deployed to Netlify
-You can build the project by changing the command in .entrypint.sh
+You can build the project by changing the command in .entrypoint.sh
 ```
 gatsby develop -H 0.0.0.0
 ```
