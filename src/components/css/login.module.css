@@ -1,3 +1,6 @@
+html{
+    padding-bottom: 0;
+}
 
 .container{
     min-height: 95vh;
@@ -10,7 +13,6 @@
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-
 }
 
 
@@ -153,6 +155,18 @@ input[type=submit]:focus {
 input[type=submit]:hover {
     cursor: pointer;
     transform: scale(1.05);
+}
+
+.github{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+}
+
+.github img{
+    width: 50px;
+    height: 50px;
 }
 
 @media only screen and (min-width:400px){
