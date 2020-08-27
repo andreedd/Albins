@@ -6,6 +6,7 @@ import "./css/Layout.css"
 import SEO from "../components/seo"
 import img from "../images/newalbin.svg"
 import note from "../images/note.svg"
+import github from "../images/githubi.png"
 
 class Login extends React.Component {
 
@@ -65,6 +66,9 @@ class Login extends React.Component {
               <input type="password" name="username" onChange={this.handleUpdate} />
               <input type="submit" value="Log In" />
             </form>
+            </div>
+            <div className={styles.github}>
+              <a href="https://github.com/andreedd/Albins"><img src={github}/></a>
             </div>
           </section>
         </>
