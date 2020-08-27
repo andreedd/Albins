@@ -2,6 +2,7 @@
     width: 90vw;
     text-transform: capitalize;
     margin: 0 auto;
+    padding-bottom: 10vh;
 }
 
 input[type=search] {
