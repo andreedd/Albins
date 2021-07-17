@@ -28,12 +28,14 @@ module.exports = {
       fields: [
         { name: 'title', store: true, attributes: { boost: 20 } },
         { name: 'category', store: true, attributes: { boost: 5 } },
+        { name: 'melody', store: true, attributes: { boost: 10 } },
         { name: 'url', store: true },
       ],
       resolvers: {
         ContentfulSong: {
           title: node => node.title,
           category: node => node.category,
+          melody: node => node.melody,
           url: node => node.title,
         },
       },

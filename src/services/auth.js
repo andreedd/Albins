@@ -9,14 +9,12 @@ const setUser = user =>
   window.localStorage.setItem("gatsbyUser", JSON.stringify(user))
 
 export const handleLogin = ({ username, password}) => {
-  console.log("###################")
-  console.log(username)
-  console.log(password)
-  if (username === password) {
+  /* Currently skipping login, set to username === password to require password*/
+  if (true) {
     return setUser({
       username: `albin`,
       name: `Albin`,
-      email: `date@abo.fi`,
+      email: ``,
     })
   }
 
