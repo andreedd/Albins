@@ -50,21 +50,22 @@ class Login extends React.Component {
           <>
           <SEO />
           <section className={styles.container}>
-            <img className={styles.albin} src={img}/>
-            <img className={styles.note} src={note}/>
-            <img className={styles.note2} src={note}/>
-            <img className={styles.note3} src={note}/>
-            <img className={styles.note4} src={note}/>
+            <img alt='albin' className={styles.albin} src={img}/>
+            <img alt='note'  className={styles.note} src={note}/>
+            <img alt='note' className={styles.note2} src={note}/>
+            <img alt='note' className={styles.note3} src={note}/>
+            <img alt='note' className={styles.note4} src={note}/>
             <div className={styles.containerWrapper}>
             <form
               method="post"
               onSubmit={event => {
                 this.handleSubmit(event, data.contentfulId.password)
               }}
-            >
+            >{/* uncomment for id password field}
               <p>ID</p>
               <input type="password" name="username" onChange={this.handleUpdate} />
-              <input type="submit" value="Log In" />
+              {*/}
+              <input type="submit" value="Skål!" />
             </form>
             </div>
             <div className={styles.github}>
