@@ -69,7 +69,7 @@ class Login extends React.Component {
             </form>
             </div>
             <div className={styles.github}>
-              <a href="https://github.com/andreedd/Albins"><img src={github}/></a>
+              <a href="https://github.com/andreedd/Albins"><img alt='github' src={github}/></a>
             </div>
           </section>
         </>

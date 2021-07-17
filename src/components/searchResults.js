@@ -19,6 +19,7 @@ const SearchResults = ({ query, results}) => {
                 title,
                 url,
                 category,
+                melody
                 }
             ) => (
                 <li key={title}>
@@ -29,7 +30,7 @@ const SearchResults = ({ query, results}) => {
                                 {title}
                             </h3>
                             <h5 style={{fontWeight: 100}}>
-                                {category}
+                                Mel: {melody}<br/>Category: {category}
                             </h5>
                         </div>
                     </Link>

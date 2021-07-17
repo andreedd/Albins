@@ -11,7 +11,7 @@ const Search = ({location}) => {
     useEffect(() => {
         if (window.__LUNR__) {
           window.__LUNR__.__loaded.then(lunr => {
-            const refs = lunr.en.index.search(searchQuery);
+            const refs = lunr.en.index.search(searchQuery + '*');
             const posts = refs.map(({ ref }) => lunr.en.store[ref]);
             setResults(posts);
           });

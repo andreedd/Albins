@@ -7,7 +7,7 @@ const searchForm = ({ query }) => {
             <input
             type="search"
             placeholder="Search..."
-            autocomplete="off"
+            autoComplete="off"
             id="search-input"
             name="keywords"
             onChange={(e) => navigate(`/search?keywords=${encodeURIComponent(e.target.value)}`)}
