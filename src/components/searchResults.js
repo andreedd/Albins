@@ -10,7 +10,7 @@ const SearchResults = ({ query, results}) => {
         <h2
             className={styles.searchResultsCount}
             id="search-results-count"
-            aria-live="polite"
+            aria-live="assertive"
             >Found {results.length} songs on "{query}"</h2>
         }
         {!!results.length &&
