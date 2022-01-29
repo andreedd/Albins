@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../components/css/songs.module.css"
+import * as styles from '../components/css/songs.module.css'
 import {Link} from "gatsby"
 
 const ComponentName = ({ data }) => {

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../components/css/songs.module.css"
+import * as styles from '../components/css/songs.module.css'
 
 const ComponentName = ({ data }) => {
     const {allContentfulSong:{nodes:songs}} = data
