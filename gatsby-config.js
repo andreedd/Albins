@@ -21,7 +21,8 @@ module.exports = {
   `gatsby-transformer-sharp`, 
   `gatsby-plugin-sharp`,
   `gatsby-plugin-react-helmet`,
-  'gatsby-plugin-image',
+  `gatsby-plugin-image`,
+  `gatsby-plugin-offline`,
   {
     resolve: 'gatsby-plugin-lunr',
     options: {
