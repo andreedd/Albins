@@ -9,13 +9,16 @@ const Search = ({location}) => {
     const searchQuery = new URLSearchParams(location.search).get('keywords') || '';
 
     useEffect(() => {
-        if (window.__LUNR__) {
-          window.__LUNR__.__loaded.then(lunr => {
-            const refs = lunr.en.index.search(searchQuery + '*');
-            const posts = refs.map(({ ref }) => lunr.en.store[ref]);
-            setResults(posts);
-          });
-        }
+        const timer = setTimeout(() => {
+          if (window.__LUNR__) {
+            window.__LUNR__.__loaded.then(lunr => {
+              const refs = lunr.en.index.search(searchQuery + '*');
+              const posts = refs.map(({ ref }) => lunr.en.store[ref]);
+              setResults(posts);
+            });
+          }
+        }, 500)
+        return () => clearTimeout(timer)
     }, [location.search]);
 
     return (
