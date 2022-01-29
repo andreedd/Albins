@@ -23,6 +23,18 @@ module.exports = {
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-image`,
   {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Albins`,
+      short_name: `Albins`,
+      start_url: `/`,
+      background_color: `#253237`,
+      theme_color: `#253237`,
+      display: `standalone`,
+      icon: `src/images/newalbin.png`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-offline`,
     options: {
       precachePages: [`/categories/*`, `/songs/*`],
