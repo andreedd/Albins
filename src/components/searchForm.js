@@ -12,7 +12,7 @@ const SearchForm = ({ query }) => {
     
         const newTimer = setTimeout(() => {
             navigate(`/search?keywords=${encodeURIComponent(e.target.value)}`)
-        }, 400)
+        }, 200)
     
         setTimer(newTimer)
       }
