@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { navigate } from 'gatsby';
 
-const searchForm = ({ query }) => {
+const SearchForm = ({ query }) => {
+    const [inputValue, setInputValue] = useState('')
+    const [timer, setTimer] = useState(null)
+
+    const inputChanged = e => {
+        setInputValue(e.target.value)
+    
+        clearTimeout(timer)
+    
+        const newTimer = setTimeout(() => {
+            navigate(`/search?keywords=${encodeURIComponent(e.target.value)}`)
+        }, 400)
+    
+        setTimer(newTimer)
+      }
+
     return (
         <form role="search" method="GET">
             <input
@@ -10,11 +25,11 @@ const searchForm = ({ query }) => {
             autoComplete="off"
             id="search-input"
             name="keywords"
-            onChange={(e) => navigate(`/search?keywords=${encodeURIComponent(e.target.value)}`)}
-            value={query}
+            onChange={inputChanged}
+            value={inputValue}
             />
         </form>
     )
 }
 
-export default searchForm
+export default SearchForm
