@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "gatsby"
-import styles from "./css/search.module.css"
+import * as styles from './css/search.module.css'
 
 const SearchResults = ({ query, results}) => {
     let slugify = require('slugify')
@@ -8,7 +8,6 @@ const SearchResults = ({ query, results}) => {
         <section className={styles.container} aria-label="Search results for all songs">
         {!!results.length && query && 
         <h2
-            className={styles.searchResultsCount}
             id="search-results-count"
             aria-live="assertive"
             >Found {results.length} songs on "{query}"</h2>
@@ -24,9 +23,9 @@ const SearchResults = ({ query, results}) => {
             ) => (
                 <li key={title}>
                     
-                    <Link to={`/songs/${slugify(url)}`} className={styles.SearchResultsListLink}>
+                    <Link to={`/songs/${slugify(url)}`}>
                         <div className={styles.link}>
-                            <h3 className={styles.searchResultsListHeading}>
+                            <h3>
                                 {title}
                             </h3>
                             <h5 style={{fontWeight: 100}}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from "gatsby"
-import styles from "./css/navbar.module.css"
+import * as styles from './css/navbar.module.css'
+
 
 const navbar = () => {
     const url = typeof window !== 'undefined' ? window.location.href : '';

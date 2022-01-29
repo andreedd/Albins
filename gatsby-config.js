@@ -21,6 +21,13 @@ module.exports = {
   `gatsby-transformer-sharp`, 
   `gatsby-plugin-sharp`,
   `gatsby-plugin-react-helmet`,
+  `gatsby-plugin-image`,
+  {
+    resolve: `gatsby-plugin-offline`,
+    options: {
+      precachePages: [`/categories/*`, `/songs/*`],
+    },
+  },
   {
     resolve: 'gatsby-plugin-lunr',
     options: {

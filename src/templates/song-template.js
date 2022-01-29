@@ -1,8 +1,31 @@
 import React from "react"
 import { graphql} from "gatsby"
 import Layout from "../components/Layout"
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import styles from "../components/css/songs.module.css"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import * as styles from '../components/css/songs.module.css'
+import { BLOCKS, MARKS } from '@contentful/rich-text-types'
+
+const Bold = ({ children }) => <span className="bold">{children}</span>
+const Text = ({ children }) => <p className="align-center">{children}</p>
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    [BLOCKS.EMBEDDED_ASSET]: node => {
+      return (
+        <>
+          <h2>Embedded Asset</h2>
+          <pre>
+            <code>{JSON.stringify(node, null, 2)}</code>
+          </pre>
+        </>
+      )
+    },
+  },
+}
 
 const ComponentName = ({ data }) => {
     return <Layout>
@@ -11,7 +34,7 @@ const ComponentName = ({ data }) => {
               <h2>{data.song.title}</h2>
               <h3><i>Mel: {data.song.melody}</i></h3>
               <div className={styles.songtext}>
-              {documentToReactComponents(data.song.content.json)}
+              {renderRichText(data.song.content, options)}
               </div>
               {data.song.author != null &&
                 <p><i>Text: {data.song.author}</i></p>
@@ -37,7 +60,7 @@ query GetSingleSong($slug:String)
       category
       audioUrl
       content {
-        json
+        raw
       }
     }
   }
